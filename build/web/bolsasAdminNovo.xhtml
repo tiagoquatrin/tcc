@@ -1,0 +1,317 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+        <head>
+            <title>Cadastrar Bolsas</title>
+            <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.ico"/>
+            <link type="text/css" href="resources/css/style.css" rel="stylesheet"/>
+            <link type="text/css" href="resources/css/table.css" rel="stylesheet"/>
+             <link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/resources/css/bootstrap.min.css"/>
+             <script type="text/javascript" src="jqueryui/js/jquery-1.8.2.min.js"></script>
+              <script language="javascript" type="text/javascript" src="resources/js/validacoes.js"></script>
+            <script type="text/javascript" src="jqueryui/js/jquery-ui-1.8.24.custom.min.js"></script>
+             <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/resources/js/bootstrap.min.js"></script>
+	</head>
+	<h:body>
+		<div class="container" style="display: block;">
+			<ui:insert name="menu">        		    
+        	
+					<ui:include src="/menuAdmin.xhtml" />
+                                        	</ui:insert>
+                   
+                        
+                        
+                        
+                 
+			<div class="contentComp" >
+                            <h:form id ="form1">
+                                <fieldset style="width: 250px;margin-left: 355px;margin-top:10px;">
+                                    <legend>
+                                        Cadastrar Bolsa
+                                    </legend>
+                                    <table id="formTopo">
+                                        <tr>
+                                            <td>
+                                                Empresa:
+                                            </td>
+                                            <td>
+                                                <h:inputText id="a" value="#{vagaBean.vaga.loc}"  required="true" requiredMessage="O campo Empresa é obrigatório" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Cargo
+                                            </td>
+                                            <td>
+                                               <h:selectOneMenu value="#{vagaBean.vaga.cargo}" required="true" requiredMessage="O campo Cargo é obrigatório"> 
+                                                      
+                                                        <f:selectItem itemValue="Bolsista" itemLabel="Bolsista"/>  
+   
+          
+                                               </h:selectOneMenu> 
+                                                
+                                                
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Descrição:
+                                            </td>
+                                            <td>
+                                                <h:inputTextarea id="b" value="#{vagaBean.vaga.descricao}" required="true" requiredMessage="O campo Descrição é obrigatório" onfocus="green" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Requisitos:
+                                            </td>
+                                            <td>
+                                                <h:inputTextarea id="c" value="#{vagaBean.vaga.titulo}" required="true" requiredMessage="O campo Requisitos é obrigatório"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Área da bolsa:
+                                            </td>
+                                            <td> 
+                                            <h:selectOneMenu value="#{vagaBean.vaga.area}" required="true" requiredMessage="O campo Área é obrigatório"> 
+                                                        <f:selectItem itemValue=" " itemLabel=" "/> 
+    <f:selectItem itemValue="Administrativo" itemLabel="Administração"/>  
+    <f:selectItem itemValue="Advocacia" itemLabel="Advocacia"/>  
+     <f:selectItem itemValue="Artes" itemLabel="Artes"/>  
+           <f:selectItem itemValue="Ciências Biológicas" itemLabel="Ciências Biológicas"/>
+            <f:selectItem itemValue="Saúde" itemLabel="Ciências da Saúde"/> 
+       <f:selectItem itemValue="Ciências Exatas" itemLabel="Ciências Exatas"/>   
+    <f:selectItem itemValue="Ciências Humanas" itemLabel="Ciências Humanas"/>    
+        <f:selectItem itemValue="Ciências Sociais" itemLabel="Ciências Sociais"/>
+            <f:selectItem itemValue="Comercial" itemLabel="Comercial"/>
+              <f:selectItem itemValue="Educação" itemLabel="Educação"/>
+              <f:selectItem itemValue="Engenharia" itemLabel="Engenharia"/>
+              <f:selectItem itemValue="Industrial" itemLabel="Industrial"/>
+            <f:selectItem itemValue="Informática" itemLabel="Informática/TI"/> 
+              <f:selectItem itemValue="Recursos Humanos" itemLabel="Recursos Humanos"/>
+ 
+        <f:selectItem itemValue="Outra" itemLabel="Outra"/>
+          
+</h:selectOneMenu> 
+                                            
+                                            
+                                            
+                                            
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Contato:
+                                            </td>
+                                            <td>
+                                                <h:inputText id="d" value="#{vagaBean.vaga.contato}" required="true" requiredMessage="O campo Contato é obrigatório"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Carga Horária:
+                                            </td>
+                                            <td>
+                                                <h:inputText id="e" value="#{vagaBean.vaga.cargahoraria}" required="true" requiredMessage="O campo Carga Horária é obrigatório"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Valor:
+                                            </td>
+                                            <td>
+                                                <h:inputText id="f" value="#{vagaBean.vaga.valor}" required="true" requiredMessage="O campo Valor é obrigatório"/>
+                                            </td>
+                                        </tr>
+                                        
+                                        
+                                        
+                                         <tr>
+                                            <td>
+                                                Curso Relacionado 1:
+                                            </td>
+                                            <td>
+                                               <h:selectOneMenu value="#{vagaBean.vaga.cursorelacionado}" required="true" requiredMessage="O campo Curso Relacionado 1 é obrigatório"> 
+                                                        <f:selectItem itemValue=" " itemLabel=" "/> 
+    <f:selectItem itemValue="Administração" itemLabel="Administração"/>  
+    <f:selectItem itemValue="Agronomia" itemLabel="Agronomia"/>  
+     <f:selectItem itemValue="Arquitetura" itemLabel="Arquitetura e Urbanismo"/>  
+           <f:selectItem itemValue="Arquivologia" itemLabel="Arquivologia"/>
+            <f:selectItem itemValue="Artes Cênicas" itemLabel="Artes Cênicas"/> 
+       <f:selectItem itemValue="Artes Visuais" itemLabel="Artes Visuais"/>   
+            <f:selectItem itemValue="Ciência da Computação" itemLabel="Ciência da Computação"/> 
+       <f:selectItem itemValue="Ciências Biológicas" itemLabel="Ciências Biológicas"/>
+       <f:selectItem itemValue="Ciências Contábeis" itemLabel="Ciências Contábeis"/>
+        <f:selectItem itemValue="Ciências Econômicas" itemLabel="Ciências Econômicas"/>
+        <f:selectItem itemValue="Ciências Sociais" itemLabel="Ciências Sociais"/>
+        <f:selectItem itemValue="Dança" itemLabel="Dança"/>
+        <f:selectItem itemValue="Desenho Industrial" itemLabel="Desenho Industrial"/>
+        <f:selectItem itemValue="Direito" itemLabel="Direito"/>          
+        <f:selectItem itemValue="Educação Especial" itemLabel="Educação Especial"/>
+        <f:selectItem itemValue="Educação Física" itemLabel="Educação Física"/>
+        <f:selectItem itemValue="Enfermagem" itemLabel="Enfermagem"/>
+        <f:selectItem itemValue="Engenharia Acústica" itemLabel="Engenharia Acústica "/>
+        <f:selectItem itemValue="Engenharia Aeroespacial" itemLabel="Engenharia Aeroespacial"/>
+        <f:selectItem itemValue="Engenharia Agrícola" itemLabel="Engenharia Agrícola"/>
+        <f:selectItem itemValue="Engenharia Ambiental" itemLabel="Engenharia Ambiental"/>
+        <f:selectItem itemValue="Engenharia Civil" itemLabel="Engenharia Civil"/>
+        <f:selectItem itemValue="Engenharia da Computação" itemLabel="Engenharia da Computação"/>
+        <f:selectItem itemValue="Engenharia de Produção" itemLabel="Engenharia de Produção"/>
+        <f:selectItem itemValue="Engenharia Elétrica" itemLabel="Engenharia Elétrica"/>
+        <f:selectItem itemValue="Engenharia Florestal" itemLabel="Engenharia Florestal"/>
+        <f:selectItem itemValue="Engenharia Mecânica" itemLabel="Engenharia Mecânica"/>
+        <f:selectItem itemValue="Farmácia" itemLabel="Farmácia"/>
+        <f:selectItem itemValue="Filosofia" itemLabel="Filosofia"/>
+        <f:selectItem itemValue="Física" itemLabel="Física"/>  
+        <f:selectItem itemValue="Fisioterapia" itemLabel="Fisioterapia"/>
+        <f:selectItem itemValue="Fonoaudiologia" itemLabel="Fonoaudiologia"/>
+        <f:selectItem itemValue="Geografia" itemLabel="Geografia"/>
+        <f:selectItem itemValue="História" itemLabel="História"/>            
+        <f:selectItem itemValue="Jornalismo" itemLabel="Jornalismo"/>
+        <f:selectItem itemValue="Espanhol" itemLabel="Letras Espanhol"/>
+        <f:selectItem itemValue="Inglês" itemLabel="Letras Inglês"/>
+        <f:selectItem itemValue="Português" itemLabel="Letras Português"/>
+        <f:selectItem itemValue="Matemática" itemLabel="Matemática"/>
+        <f:selectItem itemValue="Medicina" itemLabel="Medicina"/>
+        <f:selectItem itemValue="Medicina Veterinária" itemLabel="Medicina Veterinária"/>
+        <f:selectItem itemValue="Meteorologia" itemLabel="Meteorologia"/>
+        <f:selectItem itemValue="Música" itemLabel="Música"/> 
+        <f:selectItem itemValue="Nutrição" itemLabel="Nutrição"/>
+        <f:selectItem itemValue="Odontologia" itemLabel="Odontologia"/> 
+        <f:selectItem itemValue="Pedagogia" itemLabel="Pedagogia"/> 
+        <f:selectItem itemValue="Psicologia" itemLabel="Psicologia"/> 
+        <f:selectItem itemValue="Publicidade e Propaganda" itemLabel="Publicidade e Propaganda"/>
+        <f:selectItem itemValue="Química" itemLabel="Química"/> 
+        <f:selectItem itemValue="Redes" itemLabel="Redes de Computadores"/>
+        <f:selectItem itemValue="Relações Internacionais" itemLabel="Relações Internacionais"/>
+        <f:selectItem itemValue="Relações Públicas" itemLabel="Relações Públicas"/>
+        <f:selectItem itemValue="Serviço Social" itemLabel="Serviço Social"/>
+        <f:selectItem itemValue="Sistemas de Informação" itemLabel="Sistemas de Informação"/>
+        <f:selectItem itemValue="Sistemas para Internet" itemLabel="Sistemas para Internet"/>
+        <f:selectItem itemValue="Sociologia" itemLabel="Sociologia"/>
+        <f:selectItem itemValue="Terapia Ocupacional" itemLabel="Terapia Ocupacional"/> 
+        <f:selectItem itemValue="Zootecnia" itemLabel="Zootecnia"/> 
+        <f:selectItem itemValue="Outro" itemLabel="Outro"/>
+                                               </h:selectOneMenu>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>
+                                                Curso Relacionado 2:
+                                            </td>
+                                            <td>
+                                              <h:selectOneMenu value="#{vagaBean.vaga.cursorelacionado1}" > 
+                                                        <f:selectItem itemValue=" " itemLabel=" "/> 
+    <f:selectItem itemValue="Administração" itemLabel="Administração"/>  
+    <f:selectItem itemValue="Agronomia" itemLabel="Agronomia"/>  
+     <f:selectItem itemValue="Arquitetura" itemLabel="Arquitetura e Urbanismo"/>  
+           <f:selectItem itemValue="Arquivologia" itemLabel="Arquivologia"/>
+            <f:selectItem itemValue="Artes Cênicas" itemLabel="Artes Cênicas"/> 
+       <f:selectItem itemValue="Artes Visuais" itemLabel="Artes Visuais"/>   
+            <f:selectItem itemValue="Ciência da Computação" itemLabel="Ciência da Computação"/> 
+       <f:selectItem itemValue="Ciências Biológicas" itemLabel="Ciências Biológicas"/>
+       <f:selectItem itemValue="Ciências Contábeis" itemLabel="Ciências Contábeis"/>
+        <f:selectItem itemValue="Ciências Econômicas" itemLabel="Ciências Econômicas"/>
+        <f:selectItem itemValue="Ciências Sociais" itemLabel="Ciências Sociais"/>
+        <f:selectItem itemValue="Dança" itemLabel="Dança"/>
+        <f:selectItem itemValue="Desenho Industrial" itemLabel="Desenho Industrial"/>
+        <f:selectItem itemValue="Direito" itemLabel="Direito"/>          
+        <f:selectItem itemValue="Educação Especial" itemLabel="Educação Especial"/>
+        <f:selectItem itemValue="Educação Física" itemLabel="Educação Física"/>
+        <f:selectItem itemValue="Enfermagem" itemLabel="Enfermagem"/>
+        <f:selectItem itemValue="Engenharia Acústica" itemLabel="Engenharia Acústica "/>
+        <f:selectItem itemValue="Engenharia Aeroespacial" itemLabel="Engenharia Aeroespacial"/>
+        <f:selectItem itemValue="Engenharia Agrícola" itemLabel="Engenharia Agrícola"/>
+        <f:selectItem itemValue="Engenharia Ambiental" itemLabel="Engenharia Ambiental"/>
+        <f:selectItem itemValue="Engenharia Civil" itemLabel="Engenharia Civil"/>
+        <f:selectItem itemValue="Engenharia da Computação" itemLabel="Engenharia da Computação"/>
+        <f:selectItem itemValue="Engenharia de Produção" itemLabel="Engenharia de Produção"/>
+        <f:selectItem itemValue="Engenharia Elétrica" itemLabel="Engenharia Elétrica"/>
+        <f:selectItem itemValue="Engenharia Florestal" itemLabel="Engenharia Florestal"/>
+        <f:selectItem itemValue="Engenharia Mecânica" itemLabel="Engenharia Mecânica"/>
+        <f:selectItem itemValue="Farmácia" itemLabel="Farmácia"/>
+        <f:selectItem itemValue="Filosofia" itemLabel="Filosofia"/>
+        <f:selectItem itemValue="Física" itemLabel="Física"/>  
+        <f:selectItem itemValue="Fisioterapia" itemLabel="Fisioterapia"/>
+        <f:selectItem itemValue="Fonoaudiologia" itemLabel="Fonoaudiologia"/>
+        <f:selectItem itemValue="Geografia" itemLabel="Geografia"/>
+        <f:selectItem itemValue="História" itemLabel="História"/>            
+        <f:selectItem itemValue="Jornalismo" itemLabel="Jornalismo"/>
+        <f:selectItem itemValue="Espanhol" itemLabel="Letras Espanhol"/>
+        <f:selectItem itemValue="Inglês" itemLabel="Letras Inglês"/>
+        <f:selectItem itemValue="Português" itemLabel="Letras Português"/>
+        <f:selectItem itemValue="Matemática" itemLabel="Matemática"/>
+        <f:selectItem itemValue="Medicina" itemLabel="Medicina"/>
+        <f:selectItem itemValue="Medicina Veterinária" itemLabel="Medicina Veterinária"/>
+        <f:selectItem itemValue="Meteorologia" itemLabel="Meteorologia"/>
+        <f:selectItem itemValue="Música" itemLabel="Música"/> 
+        <f:selectItem itemValue="Nutrição" itemLabel="Nutrição"/>
+        <f:selectItem itemValue="Odontologia" itemLabel="Odontologia"/> 
+        <f:selectItem itemValue="Pedagogia" itemLabel="Pedagogia"/> 
+        <f:selectItem itemValue="Psicologia" itemLabel="Psicologia"/> 
+        <f:selectItem itemValue="Publicidade e Propaganda" itemLabel="Publicidade e Propaganda"/>
+        <f:selectItem itemValue="Química" itemLabel="Química"/> 
+        <f:selectItem itemValue="Redes" itemLabel="Redes de Computadores"/>
+        <f:selectItem itemValue="Relações Internacionais" itemLabel="Relações Internacionais"/>
+        <f:selectItem itemValue="Relações Públicas" itemLabel="Relações Públicas"/>
+        <f:selectItem itemValue="Serviço Social" itemLabel="Serviço Social"/>
+        <f:selectItem itemValue="Sistemas de Informação" itemLabel="Sistemas de Informação"/>
+        <f:selectItem itemValue="Sistemas para Internet" itemLabel="Sistemas para Internet"/>
+        <f:selectItem itemValue="Sociologia" itemLabel="Sociologia"/>
+        <f:selectItem itemValue="Terapia Ocupacional" itemLabel="Terapia Ocupacional"/> 
+        <f:selectItem itemValue="Zootecnia" itemLabel="Zootecnia"/> 
+        <f:selectItem itemValue="Outro" itemLabel="Outro"/>
+                                               </h:selectOneMenu>  
+                                                
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>                                            
+                                            <td>
+                                               <br/>
+                                               <br/>
+
+
+                                                <h:commandButton value="Salvar" action="#{vagaBean.inserirBolsa}"  />
+                                               
+                                            </td>
+                                            <td>
+                                               <br/>
+                                               <br/>
+
+
+                                               <h:commandButton value="Voltar" action="bolsasAdmin.xhtml" immediate="true"  />
+                                               
+                                            </td>
+                                             </tr>
+                                            <tr>
+                                                <h:messages id="msgInseriu" style="color: chartreuse" />
+                                                <td>
+                                                     
+                                                </td>
+                                            </tr>
+                                            
+                                       
+                                    </table>
+                                </fieldset>
+                                <br/>
+                               
+                                                              
+                                
+                            </h:form>
+                        </div>
+			
+                    <div class="footer">				
+				<texto>
+                                       Desenvolvido por Tiago Quatrin da Silva.
+                                </texto>
+			</div>
+		
+           </div>
+	</h:body>
+</html>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+   <head>
+      <title>Portal de Oportunidades</title>
+         <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.ico"/>
+      <link  href="resources/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+      <link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/resources/css/bootstrap.min.css"/>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/resources/js/bootstrap.min.js"></script>
+   </head>
+   
+   <h:body>
+      <div class="container" style="display: block;">
+
+         <h:form class="login">
+            <h3>Portal de Oportunidades</h3>
+                                 <p>Usuário:</p>
+            <h:inputText value="#{logar.aluno.matricula}"/>
+            <br/>
+            <p>Senha:</p>
+            <h:inputSecret value="#{logar.aluno.senha}"/>
+            <br/>
+              <br/>
+              <h:messages id="msgErro" style="color: red" />
+              <h:commandButton value="Login" action="#{logar.login()}"/>
+            <br/>
+              <br/>
+        </h:form>
+         <div class="footer">
+             <br/>
+                                <br/>
+				<texto>
+                                       Desenvolvido por Tiago Quatrin da Silva.
+                                </texto>
+                                <br/>
+                                <br/>
+			</div>
+      </div>
+       
+       
+   </h:body>
+
+</html>

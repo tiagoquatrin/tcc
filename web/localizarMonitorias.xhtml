@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+        <head>
+            <title>Pesquisar Monitorias</title>
+            <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.ico"/>
+            <link type="text/css" href="resources/css/style.css" rel="stylesheet"/>
+            <link type="text/css" href="resources/css/table.css" rel="stylesheet"/>
+             <link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/resources/css/bootstrap.min.css"/>
+             <script type="text/javascript" src="jqueryui/js/jquery-1.8.2.min.js"></script>
+              <script language="javascript" type="text/javascript" src="resources/js/validacoes.js"></script>
+            <script type="text/javascript" src="jqueryui/js/jquery-ui-1.8.24.custom.min.js"></script>
+             <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/resources/js/bootstrap.min.js"></script>
+	</head>
+	<h:body>
+		<div class="container" style="display: block;">
+			<ui:insert name="menu">        		    
+        	
+					<ui:include src="/menuAluno.xhtml" />
+                                        	</ui:insert>
+                   
+                        
+                        
+                        
+                 
+			<div class="contentComp" >
+                            <p>Localize Monitorias pelo código, descrição ou Curso Relacionado</p>
+                            <h:form id ="form1">
+                                <fieldset style="width: 250px;margin-left: 100px;margin-top:10px;">
+                                    <legend>
+                                        Buscar Oportunidades
+                                    </legend>
+                                    <table id="formTopo">
+
+        
+        
+        
+        
+        
+        <h1>Pesquisar Monitorias</h1>
+        <tr>
+                               
+            <td>
+                Código 
+            </td>
+            <td >
+                                    <h:inputText id="pesquisa" value="#{vagaBean.vaga.id}" maxlength="5"/>
+                                            </td>
+            <td >
+                Descrição
+            </td>
+            <td >
+                <h:inputText id="pesquisa2" value="#{vagaBean.vaga.descricao}" />
+                                            </td>
+          
+            <td>
+                Curso Relacionado 
+            </td>
+            <td>
+                 <h:selectOneMenu value="#{vagaBean.vaga.cursorelacionado}" > 
+                                                        <f:selectItem itemValue=" " itemLabel=" "/> 
+    <f:selectItem itemValue="Administração" itemLabel="Administração"/>  
+    <f:selectItem itemValue="Agronomia" itemLabel="Agronomia"/>  
+     <f:selectItem itemValue="Arquitetura" itemLabel="Arquitetura e Urbanismo"/>  
+           <f:selectItem itemValue="Arquivologia" itemLabel="Arquivologia"/>
+            <f:selectItem itemValue="Artes Cênicas" itemLabel="Artes Cênicas"/> 
+       <f:selectItem itemValue="Artes Visuais" itemLabel="Artes Visuais"/>   
+            <f:selectItem itemValue="Ciência da Computação" itemLabel="Ciência da Computação"/> 
+       <f:selectItem itemValue="Ciências Biológicas" itemLabel="Ciências Biológicas"/>
+       <f:selectItem itemValue="Ciências Contábeis" itemLabel="Ciências Contábeis"/>
+        <f:selectItem itemValue="Ciências Econômicas" itemLabel="Ciências Econômicas"/>
+        <f:selectItem itemValue="Ciências Sociais" itemLabel="Ciências Sociais"/>
+        <f:selectItem itemValue="Dança" itemLabel="Dança"/>
+        <f:selectItem itemValue="Desenho Industrial" itemLabel="Desenho Industrial"/>
+        <f:selectItem itemValue="Direito" itemLabel="Direito"/>          
+        <f:selectItem itemValue="Educação Especial" itemLabel="Educação Especial"/>
+        <f:selectItem itemValue="Educação Física" itemLabel="Educação Física"/>
+        <f:selectItem itemValue="Enfermagem" itemLabel="Enfermagem"/>
+        <f:selectItem itemValue="Engenharia Acústica" itemLabel="Engenharia Acústica "/>
+        <f:selectItem itemValue="Engenharia Aeroespacial" itemLabel="Engenharia Aeroespacial"/>
+        <f:selectItem itemValue="Engenharia Agrícola" itemLabel="Engenharia Agrícola"/>
+        <f:selectItem itemValue="Engenharia Ambiental" itemLabel="Engenharia Ambiental"/>
+        <f:selectItem itemValue="Engenharia Civil" itemLabel="Engenharia Civil"/>
+        <f:selectItem itemValue="Engenharia da Computação" itemLabel="Engenharia da Computação"/>
+        <f:selectItem itemValue="Engenharia de Produção" itemLabel="Engenharia de Produção"/>
+        <f:selectItem itemValue="Engenharia Elétrica" itemLabel="Engenharia Elétrica"/>
+        <f:selectItem itemValue="Engenharia Florestal" itemLabel="Engenharia Florestal"/>
+        <f:selectItem itemValue="Engenharia Mecânica" itemLabel="Engenharia Mecânica"/>
+        <f:selectItem itemValue="Farmácia" itemLabel="Farmácia"/>
+        <f:selectItem itemValue="Filosofia" itemLabel="Filosofia"/>
+        <f:selectItem itemValue="Física" itemLabel="Física"/>  
+        <f:selectItem itemValue="Fisioterapia" itemLabel="Fisioterapia"/>
+        <f:selectItem itemValue="Fonoaudiologia" itemLabel="Fonoaudiologia"/>
+        <f:selectItem itemValue="Geografia" itemLabel="Geografia"/>
+        <f:selectItem itemValue="História" itemLabel="História"/>            
+        <f:selectItem itemValue="Jornalismo" itemLabel="Jornalismo"/>
+        <f:selectItem itemValue="Espanhol" itemLabel="Letras Espanhol"/>
+        <f:selectItem itemValue="Inglês" itemLabel="Letras Inglês"/>
+        <f:selectItem itemValue="Português" itemLabel="Letras Português"/>
+        <f:selectItem itemValue="Matemática" itemLabel="Matemática"/>
+        <f:selectItem itemValue="Medicina" itemLabel="Medicina"/>
+        <f:selectItem itemValue="Medicina Veterinária" itemLabel="Medicina Veterinária"/>
+        <f:selectItem itemValue="Meteorologia" itemLabel="Meteorologia"/>
+        <f:selectItem itemValue="Música" itemLabel="Música"/> 
+        <f:selectItem itemValue="Nutrição" itemLabel="Nutrição"/>
+        <f:selectItem itemValue="Odontologia" itemLabel="Odontologia"/> 
+        <f:selectItem itemValue="Pedagogia" itemLabel="Pedagogia"/> 
+        <f:selectItem itemValue="Psicologia" itemLabel="Psicologia"/> 
+        <f:selectItem itemValue="Publicidade e Propaganda" itemLabel="Publicidade e Propaganda"/>
+        <f:selectItem itemValue="Química" itemLabel="Química"/> 
+        <f:selectItem itemValue="Redes" itemLabel="Redes de Computadores"/>
+        <f:selectItem itemValue="Relações Internacionais" itemLabel="Relações Internacionais"/>
+        <f:selectItem itemValue="Relações Públicas" itemLabel="Relações Públicas"/>
+        <f:selectItem itemValue="Serviço Social" itemLabel="Serviço Social"/>
+        <f:selectItem itemValue="Sistemas de Informação" itemLabel="Sistemas de Informação"/>
+        <f:selectItem itemValue="Sistemas para Internet" itemLabel="Sistemas para Internet"/>
+        <f:selectItem itemValue="Sociologia" itemLabel="Sociologia"/>
+        <f:selectItem itemValue="Terapia Ocupacional" itemLabel="Terapia Ocupacional"/> 
+        <f:selectItem itemValue="Zootecnia" itemLabel="Zootecnia"/> 
+        <f:selectItem itemValue="Outro" itemLabel="Outro"/>
+                                               </h:selectOneMenu>
+                
+                
+            </td>
+                                     
+                                            <td>
+                                                <h:commandButton value="Pesquisar" action="#{vagaBean.localizarMonitorias()}" />
+                                                 
+                                            </td>
+            </tr>
+        <tr>
+            <h:messages id="msgExcluiu" style="color: chartreuse" />
+        </tr>
+                                    </table>
+                                    </fieldset>
+                                <h2>Monitorias</h2>
+                                <h:dataTable value="#{vagaBean.pesquisamonitorias}" var="Monitoria" style="margin-left: 100px;" styleClass="tabelaBaixo" headerClass="tabelaBaixoCabecalho" rowClasses="linha1, linha2">
+                                      <h:column>
+                                      
+
+                                        <f:facet name="header">
+                                            Código
+                                        </f:facet>
+                                        #{Monitoria.id}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Local
+                                        </f:facet>
+                                        #{Monitoria.loc}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Área
+                                        </f:facet>
+                                        #{Monitoria.area}
+                                    </h:column>
+                                    
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Descrição
+                                        </f:facet>
+                                        #{Monitoria.descricao}
+                                    </h:column> 
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Requisitos
+                                        </f:facet>
+                                        #{Monitoria.titulo}
+                                    </h:column>
+                                         <h:column>
+                                        <f:facet name="header">
+                                            Contato
+                                        </f:facet>
+                                        #{Monitoria.contato}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Carga Horária
+                                        </f:facet>
+                                        #{Monitoria.cargahoraria}
+                                    </h:column>
+                                     <h:column>
+                                        <f:facet name="header">
+                                            Valor
+                                        </f:facet>
+                                        #{Monitoria.valor}
+                                    </h:column>
+                                    
+                                   
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Curso Relacionado 1
+                                        </f:facet>
+                                        #{Monitoria.cursorelacionado}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Curso Relacionado 2
+                                        </f:facet>
+                                        #{Monitoria.cursorelacionado1}
+                                    </h:column>
+                                    
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Visualizar
+                                        </f:facet>                                        
+                                        
+                                        <h:commandButton value="V" action="monitoriasVisualizar"  actionListener="#{vagaBean.selecionarMonitoriaPesquisa()}" immediate="true">
+                                         
+                                         
+                                        </h:commandButton>
+                                    </h:column>
+                                   
+                                </h:dataTable>                                
+                                                                <br/>
+                                                                
+                                </h:form>
+                                    </div>
+			
+                    <div class="footer">				
+				<texto>
+                                       Desenvolvido por Tiago Quatrin da Silva.
+                                </texto>
+			</div>
+		
+           </div>
+    </h:body>
+</html>
+

@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+            <title>Alterar Senha</title>
+               <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.ico"/>
+     
+            <link type="text/css" href="resources/css/style.css" rel="stylesheet"/>
+            <link type="text/css" href="resources/css/table.css" rel="stylesheet"/>
+             <link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/resources/css/bootstrap.min.css"/>
+            <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/resources/js/bootstrap.min.js"></script>
+	</head>
+	<h:body>
+		<div class="container" style="display: block;">
+			
+                                    <ui:insert name="menu">        		    
+        	
+					<ui:include src="/menuAluno.xhtml" />
+                                        	</ui:insert>
+				
+			<div class="contentComp">
+                        <br/>
+                        <p>
+                            Observação: sua senha deve conter 6 caracteres, e a nova senha não pode ser igual a anterior!
+                        </p>
+                        <br/>
+                        <br/>
+                        <br/>
+         <h:form>
+                                <fieldset style="width: 250px;margin-left: 355px;margin-top:10px;">
+                                    <legend>
+                                        Alterar Senha
+                                    </legend>
+                                    <table id="formTopo">
+                                        <tr>
+                                            <td>
+                                                <br/>
+                        <br/>
+                        <br/>
+                                                Senha atual:
+                                            </td>
+                                            <td>
+                                                <br/>
+                        <br/>
+                        <br/>
+                        <h:inputSecret id="a" value="#{logar.aluno.senha}" required="true" requiredMessage="O campo Senha atual é obrigatório" maxlength="6" />
+                            
+                                        
+
+                                       
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Nova senha:
+                                            </td>
+                                            <td>
+                                               
+                                                <h:inputSecret id="m" value="#{logar.aluno.novasenha}" required="true" requiredMessage="O campo Nova senha é obrigatório" maxlength="6" />
+                                               
+                                  
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Confirmar nova senha:
+                                            </td>
+                                            <td>
+                                                <h:inputSecret id="bb" value="#{logar.aluno.novasenha1}" required="true" requiredMessage="O campo Confirma nova senha é obrigatório" maxlength="6"/>
+                                                     
+
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>                                            
+                                            <td>
+                                                
+                        <br/>
+                        <br/>
+                        <h:commandButton value="Alterar Senha" action="#{logar.alterarSenha()}" />
+                                            </td>
+                                            <td>
+                                                
+                                               <br/>
+                                               <br/>
+
+
+                                               <h:commandButton value="Voltar" action="meuperfil.xhtml" immediate="true"  />
+                                               
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                                <h:messages id="msgInseriu" style="color: chartreuse" />
+                                                <td>
+                                                     
+                                                </td>
+                                            </tr>
+                                    </table>
+                                </fieldset>
+                                <br/>
+                                
+                                <br/>
+                                
+                                
+                            </h:form>
+                        </div>
+			
+                    <div class="footer">				
+				<texto>
+                                       Desenvolvido por Tiago Quatrin da Silva.
+                                </texto>
+			</div>
+		
+           </div>
+	
+    </h:body>
+</html>

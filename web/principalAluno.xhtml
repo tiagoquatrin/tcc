@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+            <title>Home - Aluno</title>
+               <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.ico"/>
+     
+            <link type="text/css" href="resources/css/style.css" rel="stylesheet"/>
+	</head>
+	<h:body>
+		<div class="container" style="display: block;">
+			
+                                    <ui:insert name="menu">        		    
+        	
+					<ui:include src="/menuAluno.xhtml" />
+                                        	</ui:insert>
+				
+			<div class="content">
+				<br/>
+                                Aluno Logado no sistema: #{logar.aluno.nome}
+                                <p>Matrícula nº: #{logar.aluno.matricula}</p>
+                                <br/>
+                                <p>Trabalho de Conclusão de Curso - Sistemas de Informação- UFSM.</p>
+                                
+			</div>
+			<div class="footer">
+				<texto>
+                                       Desenvolvido por Tiago Quatrin da Silva.
+                                </texto>
+			</div>
+		</div>
+	</h:body>
+</html>
+

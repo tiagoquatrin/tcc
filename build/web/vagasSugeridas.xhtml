@@ -1,0 +1,481 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+        <head>
+            <title>Vagas Sugeridas</title>
+            <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.ico"/>
+            <link type="text/css" href="resources/css/style.css" rel="stylesheet"/>
+            <link type="text/css" href="resources/css/table.css" rel="stylesheet"/>
+             <link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/resources/css/bootstrap.min.css"/>
+             <script type="text/javascript" src="jqueryui/js/jquery-1.8.2.min.js"></script>
+              <script language="javascript" type="text/javascript" src="resources/js/validacoes.js"></script>
+            <script type="text/javascript" src="jqueryui/js/jquery-ui-1.8.24.custom.min.js"></script>
+             <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/resources/js/bootstrap.min.js"></script>
+	</head>
+	<h:body>
+		<div class="container" style="display: block;">
+			<ui:insert name="menu">        		    
+        	
+					<ui:include src="/menuAluno.xhtml" />
+                                        	</ui:insert>
+                   
+                        
+                        
+                        
+                 
+			<div class="contentComp" >
+                            <p>Aqui você encontra vagas sugeridas de acordo com o seu perfil!!</p>
+                            <br/>
+                            <br/>
+                            <h:form id ="form1">
+                                <h2>Bolsas</h2>
+                             <h:dataTable value="#{logar.bolsassugeridas}" var="Bolsa" style="margin-left: 40px;" styleClass="tabelaBaixo" headerClass="tabelaBaixoCabecalho" rowClasses="linha1, linha2">
+                                    <h:column>
+                                      
+
+                                        <f:facet name="header">
+                                            Código
+                                        </f:facet>
+                                        #{Bolsa.id}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Empresa
+                                        </f:facet>
+                                        #{Bolsa.loc}
+                                    </h:column>
+                                    
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Descrição
+                                        </f:facet>
+                                        #{Bolsa.descricao}
+                                    </h:column> 
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Requisitos
+                                        </f:facet>
+                                        #{Bolsa.titulo}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Área
+                                        </f:facet>
+                                        #{Bolsa.area}
+                                    </h:column>
+                                         <h:column>
+                                        <f:facet name="header">
+                                            Contato
+                                        </f:facet>
+                                        #{Bolsa.contato}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Carga Horária
+                                        </f:facet>
+                                        #{Bolsa.cargahoraria}
+                                    </h:column>
+                                     <h:column>
+                                        <f:facet name="header">
+                                            Valor
+                                        </f:facet>
+                                        #{Bolsa.valor}
+                                    </h:column>                                    
+                                   
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Curso Relacionado 1
+                                        </f:facet>
+                                        #{Bolsa.cursorelacionado}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Curso Relacionado 2
+                                        </f:facet>
+                                        #{Bolsa.cursorelacionado}
+                                    </h:column>
+                                    
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Visualizar
+                                        </f:facet>                                        
+                                        
+                                        <h:commandButton value="V" action="bolsasSugeridas"  actionListener="#{logar.selecionarBolsaSugerida()}" immediate="true">
+                                         
+                                         
+                                        </h:commandButton>
+                                    </h:column>
+                                </h:dataTable>   
+                                <br/>
+                                <br/>
+                                <h2>Empregos</h2>
+                               <h:dataTable value="#{logar.empregossugeridos}" var="Emprego" style="margin-left: 40px;" styleClass="tabelaBaixo" headerClass="tabelaBaixoCabecalho" rowClasses="linha1, linha2">
+                                    <h:column>
+                                      
+
+                                        <f:facet name="header">
+                                            Código
+                                        </f:facet>
+                                        #{Emprego.id}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Empresa:
+                                        </f:facet>
+                                        #{Emprego.loc}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Cargo:
+                                        </f:facet>
+                                        #{Emprego.cargo}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Descrição
+                                        </f:facet>
+                                        #{Emprego.descricao}
+                                    </h:column> 
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Requisitos:
+                                        </f:facet>
+                                        #{Emprego.titulo}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Área
+                                        </f:facet>
+                                        #{Emprego.area}
+                                    </h:column>
+                                         <h:column>
+                                        <f:facet name="header">
+                                            Contato
+                                        </f:facet>
+                                        #{Emprego.contato}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Horário:
+                                        </f:facet>
+                                        #{Emprego.cargahoraria}
+                                    </h:column>
+                                     <h:column>
+                                        <f:facet name="header">
+                                            Salário:
+                                        </f:facet>
+                                        #{Emprego.valor}
+                                    </h:column>
+                                    
+                                   
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Benefícios:
+                                        </f:facet>
+                                        #{Emprego.beneficios}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Curso Relacionado 1:
+                                        </f:facet>
+                                        #{Emprego.cursorelacionado}
+                                    </h:column>
+                                     <h:column>
+                                        <f:facet name="header">
+                                            Curso Relacionado 2:
+                                        </f:facet>
+                                        #{Emprego.cursorelacionado1}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Visualizar
+                                        </f:facet>                                        
+                                        
+                                        <h:commandButton value="V" action="empregosSugeridos"  actionListener="#{logar.selecionarEmpregoSugerido()}" immediate="true">
+                                         
+                                         
+                                        </h:commandButton>
+                                    </h:column>
+                                </h:dataTable>  
+                                <br/>
+                                <br/>
+                                <h2>Estágios</h2>
+                                <h:dataTable value="#{logar.estagiossugeridos}" var="Estagio" style="margin-left: 40px;" styleClass="tabelaBaixo" headerClass="tabelaBaixoCabecalho" rowClasses="linha1, linha2">
+                                    <h:column>
+                                      
+
+                                        <f:facet name="header">
+                                            Código
+                                        </f:facet>
+                                        #{Estagio.id}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Empresa
+                                        </f:facet>
+                                        #{Estagio.loc}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Cargo
+                                        </f:facet>
+                                        #{Estagio.cargo}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Empresa
+                                        </f:facet>
+                                        #{Estagio.area}
+                                    </h:column>
+                                    
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Descrição
+                                        </f:facet>
+                                        #{Estagio.descricao}
+                                    </h:column> 
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Requisitos
+                                        </f:facet>
+                                        #{Estagio.titulo}
+                                    </h:column>
+                                         <h:column>
+                                        <f:facet name="header">
+                                            Contato
+                                        </f:facet>
+                                        #{Estagio.contato}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Carga Horária
+                                        </f:facet>
+                                        #{Estagio.cargahoraria}
+                                    </h:column>
+                                     <h:column>
+                                        <f:facet name="header">
+                                            Valor
+                                        </f:facet>
+                                        #{Estagio.valor}
+                                    </h:column>                                    
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Benefícios
+                                        </f:facet>
+                                        #{Estagio.beneficios}
+                                    </h:column>   
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Curso Relacionado 1
+                                        </f:facet>
+                                        #{Estagio.cursorelacionado}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Curso Relacionado 2
+                                        </f:facet>
+                                        #{Estagio.cursorelacionado1}
+                                    </h:column>
+                                    
+                                     <h:column>
+                                        <f:facet name="header">
+                                            Visualizar
+                                        </f:facet>                                        
+                                        
+                                        <h:commandButton value="V" action="estagiosSugeridos"  actionListener="#{logar.selecionarEstagioSugerido()}" immediate="true">
+                                         
+                                         
+                                        </h:commandButton>
+                                    </h:column>
+                                </h:dataTable>
+                                <br/>
+                                <br/>
+                                <h2>Monitorias</h2>
+                                <h:dataTable value="#{logar.monitoriassugeridas}" var="Monitoria" style="margin-left: 40px;" styleClass="tabelaBaixo" headerClass="tabelaBaixoCabecalho" rowClasses="linha1, linha2">
+                                      <h:column>
+                                      
+
+                                        <f:facet name="header">
+                                            Código
+                                        </f:facet>
+                                        #{Monitoria.id}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Local
+                                        </f:facet>
+                                        #{Monitoria.loc}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Área
+                                        </f:facet>
+                                        #{Monitoria.area}
+                                    </h:column>
+                                    
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Descrição
+                                        </f:facet>
+                                        #{Monitoria.descricao}
+                                    </h:column> 
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Requisitos
+                                        </f:facet>
+                                        #{Monitoria.titulo}
+                                    </h:column>
+                                         <h:column>
+                                        <f:facet name="header">
+                                            Contato
+                                        </f:facet>
+                                        #{Monitoria.contato}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Carga Horária
+                                        </f:facet>
+                                        #{Monitoria.cargahoraria}
+                                    </h:column>
+                                     <h:column>
+                                        <f:facet name="header">
+                                            Valor
+                                        </f:facet>
+                                        #{Monitoria.valor}
+                                    </h:column>
+                                    
+                                   
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Curso Relacionado 1
+                                        </f:facet>
+                                        #{Monitoria.cursorelacionado}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Curso Relacionado 2
+                                        </f:facet>
+                                        #{Monitoria.cursorelacionado1}
+                                    </h:column>
+                                    
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Visualizar
+                                        </f:facet>                                        
+                                        
+                                        <h:commandButton value="V" action="monitoriasSugeridas"  actionListener="#{logar.selecionarMonitoriaSugerida()}" immediate="true">
+                                         
+                                         
+                                        </h:commandButton>
+                                    </h:column>
+                                   
+                                   
+                                </h:dataTable>                                
+                                                            <br/>
+                                   <br/>
+                                   <h2>Projetos de Pesquisa e/ou Extensão</h2>
+                               <h:dataTable value="#{logar.projetossugeridos}" var="Projeto" style="margin-left: 40px;" styleClass="tabelaBaixo" headerClass="tabelaBaixoCabecalho" rowClasses="linha1, linha2">
+                                    <h:column>
+                                      
+
+                                        <f:facet name="header">
+                                            Código
+                                        </f:facet>
+                                        #{Projeto.id}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Local
+                                        </f:facet>
+                                        #{Projeto.loc}
+                                    </h:column>
+                                    
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Descrição
+                                        </f:facet>
+                                        #{Projeto.descricao}
+                                    </h:column> 
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Requisitos
+                                        </f:facet>
+                                        #{Projeto.titulo}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Área
+                                        </f:facet>
+                                        #{Projeto.area}
+                                    </h:column>
+                                         <h:column>
+                                        <f:facet name="header">
+                                            Contato
+                                        </f:facet>
+                                        #{Projeto.contato}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Carga Horária
+                                        </f:facet>
+                                        #{Projeto.cargahoraria}
+                                    </h:column>
+                                     <h:column>
+                                        <f:facet name="header">
+                                            Valor
+                                        </f:facet>
+                                        #{Projeto.valor}
+                                    </h:column>
+                                     <h:column>
+                                        <f:facet name="header">
+                                            Tipo de projeto
+                                        </f:facet>
+                                        #{Projeto.tipoprojeto}
+                                    </h:column>
+                                   
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Curso Relacionado 1
+                                        </f:facet>
+                                        #{Projeto.cursorelacionado}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Curso Relacionado 2
+                                        </f:facet>
+                                        #{Projeto.cursorelacionado1}
+                                    </h:column>
+                                    
+                                    <h:column>
+                                        <f:facet name="header">
+                                            Visualizar
+                                        </f:facet>                                        
+                                        
+                                        <h:commandButton value="V" action="projetosSugeridos"  actionListener="#{logar.selecionarProjetoSugerido()}" immediate="true">
+                                         
+                                         
+                                        </h:commandButton>
+                                    </h:column>
+                                </h:dataTable>
+                                <br/>                                 
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                </h:form>
+                                    </div>
+			
+                    <div class="footer">				
+				<texto>
+                                       Desenvolvido por Tiago Quatrin da Silva.
+                                </texto>
+			</div>
+		
+           </div>
+    </h:body>
+</html>
