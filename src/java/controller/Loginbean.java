@@ -446,7 +446,7 @@ email.setHostName( "smtp.gmail.com" );
 email.setSslSmtpPort( "465" );
 email.setStartTLSRequired(true);
 email.setSSLOnConnect(true);
-email.setAuthenticator( new DefaultAuthenticator( "oportaldeoportunidades@gmail.com" ,  "volverine1986" ) );
+email.setAuthenticator( new DefaultAuthenticator( "oportaldeoportunidades@gmail.com" ,  "*************************" ) );
 try {
     email.setFrom( "oportaldeoportunidades@gmail.com" , "Portal de Oportunidades");
     email.setDebug(true); 
@@ -479,7 +479,7 @@ email.setHostName( "smtp.gmail.com" );
 email.setSslSmtpPort( "465" );
 email.setStartTLSRequired(true);
 email.setSSLOnConnect(true);
-email.setAuthenticator( new DefaultAuthenticator( "oportaldeoportunidades@gmail.com" ,  "volverine1986" ) );
+email.setAuthenticator( new DefaultAuthenticator( "oportaldeoportunidades@gmail.com" ,  "*******" ) );
 try {
     email.setFrom( "oportaldeoportunidades@gmail.com" , "Portal de Oportunidades");
     email.setDebug(true); 
